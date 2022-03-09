@@ -1,0 +1,1265 @@
+> db.moviedata.find({"movie_name" : "Wake"},{"movie_name" : 1 , "_id" : 0 , "production_year":1}).pretty()
+{ "movie_name" : "Wake", "production_year" : 2020 }
+> db.moviedata.find({"movie_name" : "Wake"},{"movie_name" : 1 , "_id" : 0 , "production_year":1}).pretty()
+{ "movie_name" : "Wake", "production_year" : 2020 }
+> db.moviedata.find({"movie_name" : {$ne : "Terror is a Man" }},{"movie_name" : 1 , "_id" : 0 , "production_year":1}).pretty()
+{ "movie_name" : "Wake", "production_year" : 2020 }
+{ "movie_name" : "It's a Small World", "production_year" : 1991 }
+{
+        "movie_name" : "Time Walker (a.k.a. Being From Another Planet)",
+        "production_year" : 2020
+}
+{ "movie_name" : "Barbarosa", "production_year" : 2001 }
+{ "movie_name" : "Season for Miracles, A", "production_year" : 2001 }
+{ "movie_name" : "Break Up", "production_year" : 1999 }
+{ "movie_name" : "Orca: The Killer Whale", "production_year" : 1993 }
+{ "movie_name" : "Postcards From the Edge", "production_year" : 2004 }
+{ "movie_name" : "Price of Milk, The", "production_year" : 2007 }
+{
+        "movie_name" : "TerrorStorm: A History of Government-Sponsored Terrorism",
+        "production_year" : 1994
+}
+{ "movie_name" : "Munchies", "production_year" : 1992 }
+{ "movie_name" : "Taras Bulba", "production_year" : 2020 }
+{
+        "movie_name" : "Law, The (a.k.a. Where the Hot Wind Blows!) (Legge, La)",
+        "production_year" : 2011
+}
+{ "movie_name" : "Challenge, The", "production_year" : 1993 }
+{ "movie_name" : "Guelwaar", "production_year" : 1995 }
+{ "movie_name" : "Francis", "production_year" : 2008 }
+{
+        "movie_name" : "Red Balloon, The (Ballon rouge, Le)",
+        "production_year" : 2007
+}
+{ "movie_name" : "Super Hero Party Clown", "production_year" : 1993 }
+{ "movie_name" : "Alps (Alpeis)", "production_year" : 2011 }
+{ "movie_name" : "Kagemusha", "production_year" : 2010 }
+Type "it" for more
+> db.moviedata.find({"budget" : {$gte : 5000 }},{"movie_name" : 1 , "_id" : 0 , "production_year":1}).pretty()
+{ "movie_name" : "Wake", "production_year" : 2020 }
+{ "movie_name" : "It's a Small World", "production_year" : 1991 }
+{ "movie_name" : "Terror is a Man", "production_year" : 2007 }
+{
+        "movie_name" : "Time Walker (a.k.a. Being From Another Planet)",
+        "production_year" : 2020
+}
+{ "movie_name" : "Barbarosa", "production_year" : 2001 }
+{ "movie_name" : "Season for Miracles, A", "production_year" : 2001 }
+{ "movie_name" : "Break Up", "production_year" : 1999 }
+{ "movie_name" : "Orca: The Killer Whale", "production_year" : 1993 }
+{ "movie_name" : "Postcards From the Edge", "production_year" : 2004 }
+{ "movie_name" : "Price of Milk, The", "production_year" : 2007 }
+{
+        "movie_name" : "TerrorStorm: A History of Government-Sponsored Terrorism",
+        "production_year" : 1994
+}
+{ "movie_name" : "Munchies", "production_year" : 1992 }
+{ "movie_name" : "Taras Bulba", "production_year" : 2020 }
+{
+        "movie_name" : "Law, The (a.k.a. Where the Hot Wind Blows!) (Legge, La)",
+        "production_year" : 2011
+}
+{ "movie_name" : "Challenge, The", "production_year" : 1993 }
+{ "movie_name" : "Guelwaar", "production_year" : 1995 }
+{ "movie_name" : "Francis", "production_year" : 2008 }
+{
+        "movie_name" : "Red Balloon, The (Ballon rouge, Le)",
+        "production_year" : 2007
+}
+{ "movie_name" : "Super Hero Party Clown", "production_year" : 1993 }
+{ "movie_name" : "Alps (Alpeis)", "production_year" : 2011 }
+Type "it" for more
+> db.moviedata.find({"budget" : {$lte : 5000 }},{"movie_name" : 1 , "_id" : 0 , "production_year":1}).pretty()
+>
+> db.moviedata.find({"budget" : {$lte : 5000 }},{"movie_name" : 1 , "_id" : 0 , "production_year":1}).pretty()
+> db.moviedata.find({"budget" : {$lte : 5000 }} ).pretty()
+> db.moviedata.find({"budget" : {$gte : 15000 }} ).pretty()
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e57"),
+        "movie_name" : "Wake",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 15275
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5a"),
+        "movie_name" : "Time Walker (a.k.a. Being From Another Planet)",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : 17431
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e61"),
+        "movie_name" : "TerrorStorm: A History of Government-Sponsored Terrorism",
+        "movie_genre" : "Documentary",
+        "production_year" : 1994,
+        "budget" : 19326
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e63"),
+        "movie_name" : "Taras Bulba",
+        "movie_genre" : "Action|Adventure|Drama|Romance|War",
+        "production_year" : 2020,
+        "budget" : 17315
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e64"),
+        "movie_name" : "Law, The (a.k.a. Where the Hot Wind Blows!) (Legge, La)",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 15445
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e65"),
+        "movie_name" : "Challenge, The",
+        "movie_genre" : "Action",
+        "production_year" : 1993,
+        "budget" : 16608
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e66"),
+        "movie_name" : "Guelwaar",
+        "movie_genre" : "Drama",
+        "production_year" : 1995,
+        "budget" : 19071
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e67"),
+        "movie_name" : "Francis",
+        "movie_genre" : "Comedy",
+        "production_year" : 2008,
+        "budget" : 19648
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6c"),
+        "movie_name" : "Absentia",
+        "movie_genre" : "Horror",
+        "production_year" : 1995,
+        "budget" : 16626
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e70"),
+        "movie_name" : "Dangerous Ground",
+        "movie_genre" : "Drama",
+        "production_year" : 2003,
+        "budget" : 19111
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e71"),
+        "movie_name" : "Bench, The (Bænken)",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 16900
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e72"),
+        "movie_name" : "Adventures of Prince Achmed, The (Abenteuer des Prinzen Achmed, Die)",
+        "movie_genre" : "Adventure|Animation|Fantasy|Romance",
+        "production_year" : 2019,
+        "budget" : 16481
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e73"),
+        "movie_name" : "Michael",
+        "movie_genre" : "Drama",
+        "production_year" : 1995,
+        "budget" : 18492
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e74"),
+        "movie_name" : "Sun on the Horizon",
+        "movie_genre" : "Documentary",
+        "production_year" : 1991,
+        "budget" : 15859
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e78"),
+        "movie_name" : "Loss of Sexual Innocence, The",
+        "movie_genre" : "Drama|Fantasy",
+        "production_year" : 2003,
+        "budget" : 17559
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e79"),
+        "movie_name" : "Son-Daughter, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : 17506
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e7c"),
+        "movie_name" : "Sinbad: The Fifth Voyage",
+        "movie_genre" : "Action|Adventure|Fantasy",
+        "production_year" : 2020,
+        "budget" : 15810
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e7e"),
+        "movie_name" : "Prison Break: The Final Break",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 1990,
+        "budget" : 17264
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e7f"),
+        "movie_name" : "Future Cops (Chao ji xue xiao ba wang)",
+        "movie_genre" : "Action",
+        "production_year" : 2001,
+        "budget" : 17390
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e80"),
+        "movie_name" : "Last Passenger",
+        "movie_genre" : "Action|Mystery|Thriller",
+        "production_year" : 2002,
+        "budget" : 18505
+}
+Type "it" for more
+> db.moviedata.find({"budget" : {$lte : 15000 }} ).pretty()
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e58"),
+        "movie_name" : "It's a Small World",
+        "movie_genre" : "Comedy",
+        "production_year" : 1991,
+        "budget" : 9425
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e59"),
+        "movie_name" : "Terror is a Man",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2007,
+        "budget" : 10817
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5b"),
+        "movie_name" : "Barbarosa",
+        "movie_genre" : "Western",
+        "production_year" : 2001,
+        "budget" : 12886
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5c"),
+        "movie_name" : "Season for Miracles, A",
+        "movie_genre" : "Children|Romance",
+        "production_year" : 2001,
+        "budget" : 12204
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5d"),
+        "movie_name" : "Break Up",
+        "movie_genre" : "Thriller",
+        "production_year" : 1999,
+        "budget" : 12842
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5e"),
+        "movie_name" : "Orca: The Killer Whale",
+        "movie_genre" : "Action|Drama|Horror|Thriller",
+        "production_year" : 1993,
+        "budget" : 13626
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5f"),
+        "movie_name" : "Postcards From the Edge",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2004,
+        "budget" : 11385
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e60"),
+        "movie_name" : "Price of Milk, The",
+        "movie_genre" : "Comedy|Drama|Fantasy|Romance",
+        "production_year" : 2007,
+        "budget" : 14409
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e62"),
+        "movie_name" : "Munchies",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 1992,
+        "budget" : 12770
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e68"),
+        "movie_name" : "Red Balloon, The (Ballon rouge, Le)",
+        "movie_genre" : "Children|Fantasy",
+        "production_year" : 2007,
+        "budget" : 11383
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e69"),
+        "movie_name" : "Super Hero Party Clown",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1993,
+        "budget" : 10225
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6a"),
+        "movie_name" : "Alps (Alpeis)",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 11161
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6b"),
+        "movie_name" : "Kagemusha",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2010,
+        "budget" : 11480
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6d"),
+        "movie_name" : "Show, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2011,
+        "budget" : 12384
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6e"),
+        "movie_name" : "Carlos",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 1999,
+        "budget" : 14039
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6f"),
+        "movie_name" : "No Man of Her Own",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2008,
+        "budget" : 12047
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e75"),
+        "movie_name" : "Dances With the Dragons ( Yu long gong wu)",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1996,
+        "budget" : 14960
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e76"),
+        "movie_name" : "Betrayed",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : 13249
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e77"),
+        "movie_name" : "Gumball Rally, The",
+        "movie_genre" : "Adventure|Comedy",
+        "production_year" : 2015,
+        "budget" : 11606
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e7a"),
+        "movie_name" : "Tango & Cash",
+        "movie_genre" : "Action|Comedy|Crime|Thriller",
+        "production_year" : 2020,
+        "budget" : 9960
+}
+
+
+
+> db.moviedata.find({ $and : [{"production_year" : {$gt : 2000 } }, {"budget" : {$gt : 10000 } } ]} ).pretty()
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e57"),
+        "movie_name" : "Wake",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 15275
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e59"),
+        "movie_name" : "Terror is a Man",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2007,
+        "budget" : 10817
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5a"),
+        "movie_name" : "Time Walker (a.k.a. Being From Another Planet)",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : 17431
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5b"),
+        "movie_name" : "Barbarosa",
+        "movie_genre" : "Western",
+        "production_year" : 2001,
+        "budget" : 12886
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5c"),
+        "movie_name" : "Season for Miracles, A",
+        "movie_genre" : "Children|Romance",
+        "production_year" : 2001,
+        "budget" : 12204
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5f"),
+        "movie_name" : "Postcards From the Edge",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2004,
+        "budget" : 11385
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e60"),
+        "movie_name" : "Price of Milk, The",
+        "movie_genre" : "Comedy|Drama|Fantasy|Romance",
+        "production_year" : 2007,
+        "budget" : 14409
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e63"),
+        "movie_name" : "Taras Bulba",
+        "movie_genre" : "Action|Adventure|Drama|Romance|War",
+        "production_year" : 2020,
+        "budget" : 17315
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e64"),
+        "movie_name" : "Law, The (a.k.a. Where the Hot Wind Blows!) (Legge, La)",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 15445
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e67"),
+        "movie_name" : "Francis",
+        "movie_genre" : "Comedy",
+        "production_year" : 2008,
+        "budget" : 19648
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e68"),
+        "movie_name" : "Red Balloon, The (Ballon rouge, Le)",
+        "movie_genre" : "Children|Fantasy",
+        "production_year" : 2007,
+        "budget" : 11383
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6a"),
+        "movie_name" : "Alps (Alpeis)",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 11161
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6b"),
+        "movie_name" : "Kagemusha",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2010,
+        "budget" : 11480
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6d"),
+        "movie_name" : "Show, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2011,
+        "budget" : 12384
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6f"),
+        "movie_name" : "No Man of Her Own",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2008,
+        "budget" : 12047
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e70"),
+        "movie_name" : "Dangerous Ground",
+        "movie_genre" : "Drama",
+        "production_year" : 2003,
+        "budget" : 19111
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e72"),
+        "movie_name" : "Adventures of Prince Achmed, The (Abenteuer des Prinzen Achmed, Die)",
+        "movie_genre" : "Adventure|Animation|Fantasy|Romance",
+        "production_year" : 2019,
+        "budget" : 16481
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e76"),
+        "movie_name" : "Betrayed",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : 13249
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e77"),
+        "movie_name" : "Gumball Rally, The",
+        "movie_genre" : "Adventure|Comedy",
+        "production_year" : 2015,
+        "budget" : 11606
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e78"),
+        "movie_name" : "Loss of Sexual Innocence, The",
+        "movie_genre" : "Drama|Fantasy",
+        "production_year" : 2003,
+        "budget" : 17559
+}
+Type "it" for more
+> db.moviedata.find({ $or : [{"production_year" : {$gt : 2000 } }, {"budget" : {$gt : 10000 } } ]} ).pretty()
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e57"),
+        "movie_name" : "Wake",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 15275
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e59"),
+        "movie_name" : "Terror is a Man",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2007,
+        "budget" : 10817
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5a"),
+        "movie_name" : "Time Walker (a.k.a. Being From Another Planet)",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : 17431
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5b"),
+        "movie_name" : "Barbarosa",
+        "movie_genre" : "Western",
+        "production_year" : 2001,
+        "budget" : 12886
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5c"),
+        "movie_name" : "Season for Miracles, A",
+        "movie_genre" : "Children|Romance",
+        "production_year" : 2001,
+        "budget" : 12204
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5d"),
+        "movie_name" : "Break Up",
+        "movie_genre" : "Thriller",
+        "production_year" : 1999,
+        "budget" : 12842
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5e"),
+        "movie_name" : "Orca: The Killer Whale",
+        "movie_genre" : "Action|Drama|Horror|Thriller",
+        "production_year" : 1993,
+        "budget" : 13626
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5f"),
+        "movie_name" : "Postcards From the Edge",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2004,
+        "budget" : 11385
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e60"),
+        "movie_name" : "Price of Milk, The",
+        "movie_genre" : "Comedy|Drama|Fantasy|Romance",
+        "production_year" : 2007,
+        "budget" : 14409
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e61"),
+        "movie_name" : "TerrorStorm: A History of Government-Sponsored Terrorism",
+        "movie_genre" : "Documentary",
+        "production_year" : 1994,
+        "budget" : 19326
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e62"),
+        "movie_name" : "Munchies",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 1992,
+        "budget" : 12770
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e63"),
+        "movie_name" : "Taras Bulba",
+        "movie_genre" : "Action|Adventure|Drama|Romance|War",
+        "production_year" : 2020,
+        "budget" : 17315
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e64"),
+        "movie_name" : "Law, The (a.k.a. Where the Hot Wind Blows!) (Legge, La)",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 15445
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e65"),
+        "movie_name" : "Challenge, The",
+        "movie_genre" : "Action",
+        "production_year" : 1993,
+        "budget" : 16608
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e66"),
+        "movie_name" : "Guelwaar",
+        "movie_genre" : "Drama",
+        "production_year" : 1995,
+        "budget" : 19071
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e67"),
+        "movie_name" : "Francis",
+        "movie_genre" : "Comedy",
+        "production_year" : 2008,
+        "budget" : 19648
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e68"),
+        "movie_name" : "Red Balloon, The (Ballon rouge, Le)",
+        "movie_genre" : "Children|Fantasy",
+        "production_year" : 2007,
+        "budget" : 11383
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e69"),
+        "movie_name" : "Super Hero Party Clown",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1993,
+        "budget" : 10225
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6a"),
+        "movie_name" : "Alps (Alpeis)",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 11161
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6b"),
+        "movie_name" : "Kagemusha",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2010,
+        "budget" : 11480
+}
+Type "it" for more
+> db.moviedata.find({ $nor : [{"production_year" : {$gt : 2000 } }, {"budget" : {$gt : 10000 } } ]} ).pretty()
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e58"),
+        "movie_name" : "It's a Small World",
+        "movie_genre" : "Comedy",
+        "production_year" : 1991,
+        "budget" : 9425
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e83"),
+        "movie_name" : "Cockfighter",
+        "movie_genre" : "Drama",
+        "production_year" : 1993,
+        "budget" : 9354
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50ea9"),
+        "movie_name" : "American Wedding (American Pie 3)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1995,
+        "budget" : 9646
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50eac"),
+        "movie_name" : "Winter Kills",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 9145
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50eb3"),
+        "movie_name" : "Play It Again, Sam",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 9561
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50eb5"),
+        "movie_name" : "Crocodile Hunter: Collision Course, The",
+        "movie_genre" : "Adventure|Comedy",
+        "production_year" : 1997,
+        "budget" : 9905
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50eba"),
+        "movie_name" : "Promise, The (Versprechen, Das)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1995,
+        "budget" : 9590
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50ec2"),
+        "movie_name" : "Putzel",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1997,
+        "budget" : 9348
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f04"),
+        "movie_name" : "Charly",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1999,
+        "budget" : 9715
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f28"),
+        "movie_name" : "Pat and Mike",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1995,
+        "budget" : 9363
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f2a"),
+        "movie_name" : "Executive Target",
+        "movie_genre" : "Action|Adventure|Crime|Thriller",
+        "production_year" : 1994,
+        "budget" : 9726
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f92"),
+        "movie_name" : "Rosa Luxemburg",
+        "movie_genre" : "Drama",
+        "production_year" : 1996,
+        "budget" : 9518
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50fa0"),
+        "movie_name" : "Manson",
+        "movie_genre" : "Documentary",
+        "production_year" : 1993,
+        "budget" : 9383
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50fc0"),
+        "movie_name" : "Dark Water (Honogurai mizu no soko kara)",
+        "movie_genre" : "Drama|Horror|Mystery|Thriller",
+        "production_year" : 1993,
+        "budget" : 9049
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50ff0"),
+        "movie_name" : "Rooster Cogburn",
+        "movie_genre" : "Comedy|Western",
+        "production_year" : 1999,
+        "budget" : 9814
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50ff2"),
+        "movie_name" : "Lassie",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 1991,
+        "budget" : 9618
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50ffd"),
+        "movie_name" : "Vincere",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1995,
+        "budget" : 9237
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc51002"),
+        "movie_name" : "California Solo",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 9870
+}
+> db.moviedata.find({ $and : [{"production_year" : {$gte : 2000 } }, {"production_year" : {$lte : 2010 } } ]} ).pretty()
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e59"),
+        "movie_name" : "Terror is a Man",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2007,
+        "budget" : 10817
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5b"),
+        "movie_name" : "Barbarosa",
+        "movie_genre" : "Western",
+        "production_year" : 2001,
+        "budget" : 12886
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5c"),
+        "movie_name" : "Season for Miracles, A",
+        "movie_genre" : "Children|Romance",
+        "production_year" : 2001,
+        "budget" : 12204
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5f"),
+        "movie_name" : "Postcards From the Edge",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2004,
+        "budget" : 11385
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e60"),
+        "movie_name" : "Price of Milk, The",
+        "movie_genre" : "Comedy|Drama|Fantasy|Romance",
+        "production_year" : 2007,
+        "budget" : 14409
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e67"),
+        "movie_name" : "Francis",
+        "movie_genre" : "Comedy",
+        "production_year" : 2008,
+        "budget" : 19648
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e68"),
+        "movie_name" : "Red Balloon, The (Ballon rouge, Le)",
+        "movie_genre" : "Children|Fantasy",
+        "production_year" : 2007,
+        "budget" : 11383
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6b"),
+        "movie_name" : "Kagemusha",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2010,
+        "budget" : 11480
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e6f"),
+        "movie_name" : "No Man of Her Own",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2008,
+        "budget" : 12047
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e70"),
+        "movie_name" : "Dangerous Ground",
+        "movie_genre" : "Drama",
+        "production_year" : 2003,
+        "budget" : 19111
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e76"),
+        "movie_name" : "Betrayed",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : 13249
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e78"),
+        "movie_name" : "Loss of Sexual Innocence, The",
+        "movie_genre" : "Drama|Fantasy",
+        "production_year" : 2003,
+        "budget" : 17559
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e7b"),
+        "movie_name" : "Woochi: The Demon Slayer",
+        "movie_genre" : "Action|Comedy|Fantasy",
+        "production_year" : 2001,
+        "budget" : 11642
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e7f"),
+        "movie_name" : "Future Cops (Chao ji xue xiao ba wang)",
+        "movie_genre" : "Action",
+        "production_year" : 2001,
+        "budget" : 17390
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e80"),
+        "movie_name" : "Last Passenger",
+        "movie_genre" : "Action|Mystery|Thriller",
+        "production_year" : 2002,
+        "budget" : 18505
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e81"),
+        "movie_name" : "Trial of Joan of Arc, The (Procès de Jeanne d'Arc)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2010,
+        "budget" : 10432
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e82"),
+        "movie_name" : "Jackass Presents: Bad Grandpa .5",
+        "movie_genre" : "Comedy|Documentary",
+        "production_year" : 2000,
+        "budget" : 19774
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e85"),
+        "movie_name" : "Country Strong",
+        "movie_genre" : "Drama|Musical|Romance",
+        "production_year" : 2010,
+        "budget" : 16769
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e8a"),
+        "movie_name" : "Leaning Tower, The (Kalteva torni)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2002,
+        "budget" : 9508
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e8d"),
+        "movie_name" : "The Divine Move",
+        "movie_genre" : "Action|Crime|Drama",
+        "production_year" : 2004,
+        "budget" : 13242
+}
+Type "it" for more
+> db.moviedata.find({}).sort([{"production_year" : 1 }, {"movie_name" : 1 }])
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "Expected field sortto be of type object",
+        "code" : 14,
+        "codeName" : "TypeMismatch"
+}
+> db.moviedata.find({}).sort({"production_year" : 1 }, {"movie_name" : 1 })
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50e71"), "movie_name" : "Bench, The (Bænken)", "movie_genre" : "Drama", "production_year" : 1990, "budget" : 16900 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50e7e"), "movie_name" : "Prison Break: The Final Break", "movie_genre" : "Action|Drama|Thriller", "production_year" : 1990, "budget" : 17264 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50e89"), "movie_name" : "Araya", "movie_genre" : "Documentary", "production_year" : 1990, "budget" : 12873 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50eaf"), "movie_name" : "Asterix in America (a.k.a Asterix Conquers America) (Astérix et les Indiens)", "movie_genre" : "Adventure|Animation|Children|Comedy", "production_year" : 1990, "budget" : 13958 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50eca"), "movie_name" : "Clifford's Really Big Movie", "movie_genre" : "Animation|Children", "production_year" : 1990, "budget" : 14930 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50ecd"), "movie_name" : "Trouble at Timpetill (Enfants de Timpelbach, Les)", "movie_genre" : "Adventure|Children|Fantasy", "production_year" : 1990, "budget" : 13839 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50ef0"), "movie_name" : "Septième juré, Le", "movie_genre" : "Crime|Drama", "production_year" : 1990, "budget" : 16385 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50f1b"), "movie_name" : "Kairat", "movie_genre" : "Drama", "production_year" : 1990, "budget" : 11427 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50f3f"), "movie_name" : "Samurai I: Musashi Miyamoto (Miyamoto Musashi)", "movie_genre" : "Action|Adventure|Drama", "production_year" : 1990, "budget" : 16962 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50f79"), "movie_name" : "D.O.A.", "movie_genre" : "Film-Noir|Mystery|Thriller", "production_year" : 1990, "budget" : 12071 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50f8a"), "movie_name" : "Wilson", "movie_genre" : "Drama", "production_year" : 1990, "budget" : 19686 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50fcb"), "movie_name" : "Love at the Top", "movie_genre" : "Comedy|Drama", "production_year" : 1990, "budget" : 19082 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc5101d"), "movie_name" : "Four Times, The (Le Quattro Volte)", "movie_genre" : "Drama", "production_year" : 1990, "budget" : 12449 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50e58"), "movie_name" : "It's a Small World", "movie_genre" : "Comedy", "production_year" : 1991, "budget" : 9425 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50e74"), "movie_name" : "Sun on the Horizon", "movie_genre" : "Documentary", "production_year" : 1991, "budget" : 15859 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50eac"), "movie_name" : "Winter Kills", "movie_genre" : "Drama", "production_year" : 1991, "budget" : 9145 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50ee3"), "movie_name" : "Children of Noisy Village, The (a.k.a Children of Bullerby Village, The) (Alla vi barn i Bullerbyn)", "movie_genre" : "Children", "production_year" : 1991, "budget" : 10421 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50ee6"), "movie_name" : "Aaja Nachle", "movie_genre" : "Comedy|Musical|Romance", "production_year" : 1991, "budget" : 18358 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50f1f"), "movie_name" : "GhostWatcher", "movie_genre" : "Horror|Mystery|Sci-Fi", "production_year" : 1991, "budget" : 17828 }
+{ "_id" : ObjectId("6228a69eb7ae032b2bc50f22"), "movie_name" : "Educating Rita", "movie_genre" : "Comedy|Drama", "production_year" : 1991, "budget" : 17636 }
+Type "it" for more
+> db.moviedata.find({}).sort({"production_year" : 1 }, {"movie_name" : 1 }).pretty()
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e71"),
+        "movie_name" : "Bench, The (Bænken)",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 16900
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e7e"),
+        "movie_name" : "Prison Break: The Final Break",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 1990,
+        "budget" : 17264
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e89"),
+        "movie_name" : "Araya",
+        "movie_genre" : "Documentary",
+        "production_year" : 1990,
+        "budget" : 12873
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50eaf"),
+        "movie_name" : "Asterix in America (a.k.a Asterix Conquers America) (Astérix et les Indiens)",
+        "movie_genre" : "Adventure|Animation|Children|Comedy",
+        "production_year" : 1990,
+        "budget" : 13958
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50eca"),
+        "movie_name" : "Clifford's Really Big Movie",
+        "movie_genre" : "Animation|Children",
+        "production_year" : 1990,
+        "budget" : 14930
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50ecd"),
+        "movie_name" : "Trouble at Timpetill (Enfants de Timpelbach, Les)",
+        "movie_genre" : "Adventure|Children|Fantasy",
+        "production_year" : 1990,
+        "budget" : 13839
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50ef0"),
+        "movie_name" : "Septième juré, Le",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1990,
+        "budget" : 16385
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f1b"),
+        "movie_name" : "Kairat",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 11427
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f3f"),
+        "movie_name" : "Samurai I: Musashi Miyamoto (Miyamoto Musashi)",
+        "movie_genre" : "Action|Adventure|Drama",
+        "production_year" : 1990,
+        "budget" : 16962
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f79"),
+        "movie_name" : "D.O.A.",
+        "movie_genre" : "Film-Noir|Mystery|Thriller",
+        "production_year" : 1990,
+        "budget" : 12071
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f8a"),
+        "movie_name" : "Wilson",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 19686
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50fcb"),
+        "movie_name" : "Love at the Top",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1990,
+        "budget" : 19082
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc5101d"),
+        "movie_name" : "Four Times, The (Le Quattro Volte)",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 12449
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e58"),
+        "movie_name" : "It's a Small World",
+        "movie_genre" : "Comedy",
+        "production_year" : 1991,
+        "budget" : 9425
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e74"),
+        "movie_name" : "Sun on the Horizon",
+        "movie_genre" : "Documentary",
+        "production_year" : 1991,
+        "budget" : 15859
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50eac"),
+        "movie_name" : "Winter Kills",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 9145
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50ee3"),
+        "movie_name" : "Children of Noisy Village, The (a.k.a Children of Bullerby Village, The) (Alla vi barn i Bullerbyn)",
+        "movie_genre" : "Children",
+        "production_year" : 1991,
+        "budget" : 10421
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50ee6"),
+        "movie_name" : "Aaja Nachle",
+        "movie_genre" : "Comedy|Musical|Romance",
+        "production_year" : 1991,
+        "budget" : 18358
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f1f"),
+        "movie_name" : "GhostWatcher",
+        "movie_genre" : "Horror|Mystery|Sci-Fi",
+        "production_year" : 1991,
+        "budget" : 17828
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f22"),
+        "movie_name" : "Educating Rita",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1991,
+        "budget" : 17636
+}
+Type "it" for more
+> db.moviedata.find({}).sort({"production_year" : -1 }, {"movie_name" : 1 }).pretty()
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e57"),
+        "movie_name" : "Wake",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 15275
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e5a"),
+        "movie_name" : "Time Walker (a.k.a. Being From Another Planet)",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : 17431
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e63"),
+        "movie_name" : "Taras Bulba",
+        "movie_genre" : "Action|Adventure|Drama|Romance|War",
+        "production_year" : 2020,
+        "budget" : 17315
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e7a"),
+        "movie_name" : "Tango & Cash",
+        "movie_genre" : "Action|Comedy|Crime|Thriller",
+        "production_year" : 2020,
+        "budget" : 9960
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e7c"),
+        "movie_name" : "Sinbad: The Fifth Voyage",
+        "movie_genre" : "Action|Adventure|Fantasy",
+        "production_year" : 2020,
+        "budget" : 15810
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e86"),
+        "movie_name" : "This Is Where I Leave You",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2020,
+        "budget" : 15495
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e90"),
+        "movie_name" : "What the Day Owes the Night",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 17828
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50ec1"),
+        "movie_name" : "Tenant, The (Locataire, Le)",
+        "movie_genre" : "Drama|Horror|Mystery|Thriller",
+        "production_year" : 2020,
+        "budget" : 10941
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50ed3"),
+        "movie_name" : "I Still Know What You Did Last Summer",
+        "movie_genre" : "Horror|Mystery|Thriller",
+        "production_year" : 2020,
+        "budget" : 14321
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f51"),
+        "movie_name" : "In the Basement",
+        "movie_genre" : "Documentary",
+        "production_year" : 2020,
+        "budget" : 12970
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f70"),
+        "movie_name" : "Splice",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2020,
+        "budget" : 15162
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50f88"),
+        "movie_name" : "High Time (Big Daddy)",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 2020,
+        "budget" : 17011
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50fc1"),
+        "movie_name" : "Whistling in Dixie",
+        "movie_genre" : "Comedy|Crime|Mystery",
+        "production_year" : 2020,
+        "budget" : 9970
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50fc9"),
+        "movie_name" : "Airspeed",
+        "movie_genre" : "Action|Adventure|Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 18858
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc51003"),
+        "movie_name" : "Head Over Heels",
+        "movie_genre" : "Animation|Children|Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 16291
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc51035"),
+        "movie_name" : "God Help the Girl",
+        "movie_genre" : "Drama|Musical|Romance",
+        "production_year" : 2020,
+        "budget" : 15929
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e72"),
+        "movie_name" : "Adventures of Prince Achmed, The (Abenteuer des Prinzen Achmed, Die)",
+        "movie_genre" : "Adventure|Animation|Fantasy|Romance",
+        "production_year" : 2019,
+        "budget" : 16481
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e8b"),
+        "movie_name" : "Spirit of '76, The",
+        "movie_genre" : "Comedy|Sci-Fi",
+        "production_year" : 2019,
+        "budget" : 15461
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e93"),
+        "movie_name" : "Mother of Tears: The Third Mother (Terza madre, La)",
+        "movie_genre" : "Fantasy|Horror|Thriller",
+        "production_year" : 2019,
+        "budget" : 9054
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e9a"),
+        "movie_name" : "Repatriation",
+        "movie_genre" : "Documentary",
+        "production_year" : 2019,
+        "budget" : 19947
+}
+Type "it" for more
+> db.moviedata.find({}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e61"),
+        "movie_name" : "TerrorStorm: A History of Government-Sponsored Terrorism",
+        "movie_genre" : "Documentary",
+        "production_year" : 1994,
+        "budget" : 19326
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e62"),
+        "movie_name" : "Munchies",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 1992,
+        "budget" : 12770
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e63"),
+        "movie_name" : "Taras Bulba",
+        "movie_genre" : "Action|Adventure|Drama|Romance|War",
+        "production_year" : 2020,
+        "budget" : 17315
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e64"),
+        "movie_name" : "Law, The (a.k.a. Where the Hot Wind Blows!) (Legge, La)",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 15445
+}
+{
+        "_id" : ObjectId("6228a69eb7ae032b2bc50e65"),
+        "movie_name" : "Challenge, The",
+        "movie_genre" : "Action",
+        "production_year" : 1993,
+        "budget" : 16608
+}
+>
